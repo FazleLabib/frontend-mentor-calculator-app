@@ -1,5 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
+:root {
+
+}
+
+
+.theme-one {
+    /* ### Theme 1 */
+    
+    /* #### Backgrounds */
+    
+    --main-background: hsl(222, 26%, 31%);
+    
+    --toggle-background: hsl(223, 31%, 20%);
+    --keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    
+    /* #### Keys */
+    
+    --key-background: hsl(225, 21%, 49%);
+    --key-shadow: hsl(224, 28%, 35%);
+    
+    --key-background: hsl(6, 63%, 50%);
+    --toggle: hsl(6, 63%, 50%);
+    --key-shadow: hsl(6, 70%, 34%);
+    
+    --key-background: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+    
+    /* #### Text */
+
+    --text-one: hsl(221, 14%, 31%);
+    --text-two: hsl(0, 0%, 100%);
+    --text-three: hsl(0, 0%, 100%);
+}
+
+.theme-two {
+    /* ### Theme 2 */
+    
+    /* #### Backgrounds */
+    
+    --main-background: hsl(0, 0%, 90%);
+    
+    --toggle-background: hsl(0, 5%, 81%);
+    --keypad-background: hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);
+    
+    /* #### Keys */
+    
+    --key-background: hsl(185, 42%, 37%);
+    --key-shadow: hsl(185, 58%, 25%);
+    
+    --key-background: hsl(25, 98%, 40%);
+    --toggle: hsl(25, 98%, 40%);
+    --key-shadow: hsl(25, 99%, 27%);
+    
+    --key-background: hsl(45, 7%, 89%);
+    --key-shadow: hsl(35, 11%, 61%);
+    
+    /* #### Text */
+
+    --text-one: hsl(60, 10%, 19%);
+    --text-two: hsl(0, 0%, 100%);
+    --text-three: hsl(0, 0%, 100%);
+}
+
+.theme-two {
+    /* ### Theme 3 */
+    
+    /* #### Backgrounds */
+    
+    --main-background: hsl(268, 75%, 9%);
+    
+    --toggle-background: hsl(268, 71%, 12%);
+    --keypad-background: hsl(268, 71%, 12%);
+    --screen-background: hsl(268, 71%, 12%);
+    
+    /* #### Keys */
+    
+    --key-background: hsl(281, 89%, 26%);
+    --key-shadow: hsl(285, 91%, 52%);
+    
+    --key-background: hsl(176, 100%, 44%);
+    --toggle: hsl(176, 100%, 44%);
+    --key-shadow: hsl(177, 92%, 70%);
+    
+    --key-background: hsl(268, 47%, 21%);
+    --key-shadow: hsl(290, 70%, 36%);
+    
+    /* #### Text */
+
+    --text-one: hsl(52, 100%, 62%);
+    --text-two: hsl(0, 0%, 100%);
+    --text-three: hsl(198, 20%, 13%);
+}
+
 * {
     margin: 0;
     padding: 0;
