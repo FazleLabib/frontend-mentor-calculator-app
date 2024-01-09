@@ -2,10 +2,6 @@
 
 :root {
 
-}
-
-
-.theme-one {
     /* ### Theme 1 */
     
     /* #### Backgrounds */
@@ -33,6 +29,7 @@
     --text-one: hsl(221, 14%, 31%);
     --text-two: hsl(0, 0%, 100%);
     --text-three: hsl(0, 0%, 100%);
+
 }
 
 .theme-two {
@@ -99,6 +96,15 @@
     margin: 0;
     padding: 0;
     font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    background-color: var(--main-background);
 }
 
 .attribution { 
