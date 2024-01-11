@@ -114,6 +114,12 @@ body {
     color: var(--text-two);
 }
 
+.theme-switcher span{
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.15rem;
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
