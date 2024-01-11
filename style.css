@@ -107,6 +107,13 @@ body {
     background-color: var(--main-background);
 }
 
+.header {
+    display: flex;
+    align-items: first baseline;
+    justify-content: space-between;
+    color: var(--text-two);
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
