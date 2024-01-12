@@ -14,21 +14,24 @@
     
     /* #### Keys */
     
-    --key-background: hsl(225, 21%, 49%);
-    --key-shadow: hsl(224, 28%, 35%);
+    --key-background-1: hsl(225, 21%, 49%);
+    --key-shadow-1: hsl(224, 28%, 35%);
     
-    --key-background: hsl(6, 63%, 50%);
+    --key-background-2: hsl(6, 63%, 50%);
     --toggle: hsl(6, 63%, 50%);
-    --key-shadow: hsl(6, 70%, 34%);
+    --toggle-hover: hsl(6, 68%, 54%);
+    --key-shadow-2: hsl(6, 70%, 34%);
     
-    --key-background: hsl(30, 25%, 89%);
-    --key-shadow: hsl(28, 16%, 65%);
+    --key-background-3: hsl(30, 25%, 89%);
+    --key-shadow-3: hsl(28, 16%, 65%);
     
     /* #### Text */
 
     --text-one: hsl(221, 14%, 31%);
     --text-two: hsl(0, 0%, 100%);
     --text-three: hsl(0, 0%, 100%);
+
+    --slider-value: 1; /* Initial value of slider */
 
 }
 
@@ -45,15 +48,16 @@
     
     /* #### Keys */
     
-    --key-background: hsl(185, 42%, 37%);
-    --key-shadow: hsl(185, 58%, 25%);
+    --key-background-1: hsl(185, 42%, 37%);
+    --key-shadow-1: hsl(185, 58%, 25%);
     
-    --key-background: hsl(25, 98%, 40%);
+    --key-background-2: hsl(25, 98%, 40%);
     --toggle: hsl(25, 98%, 40%);
-    --key-shadow: hsl(25, 99%, 27%);
+    --toggle-hover: hsl(25, 88%, 44%);
+    --key-shadow-2: hsl(25, 99%, 27%);
     
-    --key-background: hsl(45, 7%, 89%);
-    --key-shadow: hsl(35, 11%, 61%);
+    --key-background-3: hsl(45, 7%, 89%);
+    --key-shadow-3: hsl(35, 11%, 61%);
     
     /* #### Text */
 
@@ -75,15 +79,16 @@
     
     /* #### Keys */
     
-    --key-background: hsl(281, 89%, 26%);
-    --key-shadow: hsl(285, 91%, 52%);
+    --key-background-1: hsl(281, 89%, 26%);
+    --key-shadow-1: hsl(285, 91%, 52%);
     
-    --key-background: hsl(176, 100%, 44%);
+    --key-background-2: hsl(176, 100%, 44%);
     --toggle: hsl(176, 100%, 44%);
-    --key-shadow: hsl(177, 92%, 70%);
+    --toggle-hover: hsl(176, 86%, 49%);
+    --key-shadow-2: hsl(177, 92%, 70%);
     
-    --key-background: hsl(268, 47%, 21%);
-    --key-shadow: hsl(290, 70%, 36%);
+    --key-background-3: hsl(268, 47%, 21%);
+    --key-shadow-3: hsl(290, 70%, 36%);
     
     /* #### Text */
 
