@@ -27,9 +27,10 @@
     
     /* #### Text */
 
-    --text-one: hsl(221, 14%, 31%);
-    --text-two: hsl(0, 0%, 100%);
+    --text-one: hsl(0, 0%, 100%);
+    --text-two: hsl(221, 14%, 31%);
     --text-three: hsl(0, 0%, 100%);
+    --text-four: hsl(0, 0%, 100%);
 
     --slider-value: 1; /* Initial value of slider */
 
@@ -62,8 +63,9 @@
     /* #### Text */
 
     --text-one: hsl(60, 10%, 19%);
-    --text-two: hsl(0, 0%, 100%);
+    --text-two: hsl(60, 10%, 19%);
     --text-three: hsl(0, 0%, 100%);
+    --text-four: hsl(0, 0%, 100%);
 }
 
 .theme-two {
@@ -93,8 +95,9 @@
     /* #### Text */
 
     --text-one: hsl(52, 100%, 62%);
-    --text-two: hsl(0, 0%, 100%);
-    --text-three: hsl(198, 20%, 13%);
+    --text-two: hsl(52, 100%, 62%);
+    --text-three: hsl(0, 0%, 100%);
+    --text-four: hsl(198, 20%, 13%);
 }
 
 * {
@@ -116,7 +119,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--text-two);
+    color: var(--text-one);
 }
 
 .header h1 {
@@ -218,6 +221,17 @@ input[type='range']::-webkit-slider-thumb:active {
 
 input[type='range']::-moz-range-thumb:active {
     background-color: var(--toggle-hover);
+}
+
+.screen {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: var(--screen-background);
+    border-radius: 1rem;
+    padding: 2rem;
+    color: var(--text-one);
+    font-size: 3rem;
 }
 
 .attribution { 
