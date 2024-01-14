@@ -234,6 +234,10 @@ input[type='range']::-moz-range-thumb:active {
     font-size: 3rem;
 }
 
+.keyboard {
+    background-color: var(--keypad-background);
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
