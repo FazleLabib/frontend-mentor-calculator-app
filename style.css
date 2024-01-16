@@ -115,6 +115,12 @@ body {
     background-color: var(--main-background);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .header {
     display: flex;
     align-items: center;
