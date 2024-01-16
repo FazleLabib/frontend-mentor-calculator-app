@@ -247,6 +247,10 @@ input[type='range']::-moz-range-thumb:active {
     border-radius: 1rem;
 }
 
+#reset, #result {
+    grid-column: span 2;
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
