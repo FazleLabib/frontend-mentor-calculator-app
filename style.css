@@ -266,6 +266,18 @@ input[type='range']::-moz-range-thumb:active {
     grid-column: span 2;
 }
 
+#del, #reset {
+    background-color: var(--key-background-1);
+    box-shadow: 0px 5px 0px 0px var(--key-shadow-1);
+    color: var(--text-one);
+}
+
+#result {
+    background-color: var(--key-background-2);
+    box-shadow: 0px 5px 0px 0px var(--key-shadow-2);
+    color: var(--text-four);
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
