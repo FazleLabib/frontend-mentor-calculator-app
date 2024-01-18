@@ -243,7 +243,7 @@ input[type='range']::-moz-range-thumb:active {
 .keyboard {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
     background-color: var(--keypad-background);
     border-radius: 1rem;
 }
