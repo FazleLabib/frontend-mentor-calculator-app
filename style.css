@@ -252,13 +252,14 @@ input[type='range']::-moz-range-thumb:active {
 .key {
     cursor: pointer;
     border: transparent;
-    font-size: 2.25rem;
-    padding: 0.5rem;
+    font-size: 2rem;
+    padding: 1rem;
     border-radius: 0.65rem;
     color: var(--text-two);
-    aspect-ratio: 6;
+    aspect-ratio: 4;
     background-color: var(--key-background-3);
     box-shadow: 0px 5px 0px 0px var(--key-shadow-3);
+    text-transform: uppercase;
 }
 
 #reset, #result {
