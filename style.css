@@ -278,11 +278,17 @@ input[type='range']::-moz-range-thumb:active {
     color: var(--text-four);
 }
 
+footer {
+    position: absolute;
+    bottom: 1rem;
+}
+
 .attribution { 
-    font-size: 11px; 
+    font-size: 1rem; 
     text-align: center; 
+    color: var(--text-one);
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--key-background-2); 
 }
