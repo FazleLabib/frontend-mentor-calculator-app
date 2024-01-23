@@ -24,6 +24,10 @@
     
     --key-background-3: hsl(30, 25%, 89%);
     --key-shadow-3: hsl(28, 16%, 65%);
+
+    --key-hover-1: hsl(225, 52%, 76%);
+    --key-hover-2: hsl(6, 93%, 67%);
+    --key-hover-3: hsl(0, 0%, 100%);
     
     /* #### Text */
 
@@ -59,6 +63,10 @@
     
     --key-background-3: hsl(45, 7%, 89%);
     --key-shadow-3: hsl(35, 11%, 61%);
+
+    --key-hover-1: hsl(186, 41%, 56%);
+    --key-hover-2: hsl(25, 100%, 61%);
+    --key-hover-3: hsl(0, 0%, 100%);
     
     /* #### Text */
 
@@ -91,6 +99,10 @@
     
     --key-background-3: hsl(268, 47%, 21%);
     --key-shadow-3: hsl(290, 70%, 36%);
+
+    --key-hover-1: #8632B0;
+    --key-hover-2: #93FFF8;
+    --key-hover-3: #6B33AD;
     
     /* #### Text */
 
