@@ -290,6 +290,21 @@ input[type='range']::-moz-range-thumb:active {
     color: var(--text-four);
 }
 
+.key:hover {
+    transition: .2s ease-in-out;
+    background-color: var(--key-hover-3);
+}
+
+#del:hover, #reset:hover {
+    transition: .2s ease-in-out;
+    background-color: var(--key-hover-1);
+}
+
+#result:hover {
+    transition: .2s ease-in-out;
+    background-color: var(--key-hover-2);
+}
+
 footer {
     position: absolute;
     bottom: 1rem;
