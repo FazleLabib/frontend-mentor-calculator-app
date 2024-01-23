@@ -295,14 +295,29 @@ input[type='range']::-moz-range-thumb:active {
     background-color: var(--key-hover-3);
 }
 
+.key:active {
+    box-shadow: 0px 3px 0px 0px var(--key-shadow-3);
+    transform: translateY(4px);
+}
+
 #del:hover, #reset:hover {
     transition: .2s ease-in-out;
     background-color: var(--key-hover-1);
 }
 
+#del:active, #reset:active {
+    box-shadow: 0px 3px 0px 0px var(--key-shadow-1);
+    transform: translateY(4px);
+}
+
 #result:hover {
     transition: .2s ease-in-out;
     background-color: var(--key-hover-2);
+}
+
+#result:active {
+    box-shadow: 0px 3px 0px 0px var(--key-shadow-2);
+    transform: translateY(4px);
 }
 
 footer {
