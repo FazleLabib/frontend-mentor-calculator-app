@@ -24,3 +24,16 @@ const keyMultiply = document.getElementById('x');
 
 const keyReset = document.getElementById('reset');
 const keyResult = document.getElementById('result');
+
+themeSlider.addEventListener('input', function() {
+    const theme = parseInt(this.value);
+
+    document.body.classList.remove('theme-two', 'theme-three');
+
+    if (theme === 2) {
+      document.body.classList.add('theme-two');
+    } else if (theme === 3) {
+      document.body.classList.add('theme-three');
+    }
+
+});
