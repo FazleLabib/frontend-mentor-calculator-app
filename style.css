@@ -243,6 +243,7 @@ input[type='range']::-moz-range-thumb:active {
 
 .screen {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: end;
     background-color: var(--screen-background);
@@ -250,6 +251,14 @@ input[type='range']::-moz-range-thumb:active {
     padding: 2rem;
     color: var(--text-one);
     font-size: 3rem;
+}
+
+#input {
+    align-self: flex-start;
+}
+
+#output {
+    align-self: flex-end;
 }
 
 .keyboard {
