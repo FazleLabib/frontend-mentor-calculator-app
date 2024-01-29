@@ -1,6 +1,7 @@
 const themeSlider = document.getElementById('slider-range');
 
 const input = document.getElementById('input');
+const output = document.getElementById('output');
 
 const keySeven = document.getElementById('7');
 const keyEight = document.getElementById('8');
