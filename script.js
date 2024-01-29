@@ -26,6 +26,8 @@ const keyMultiply = document.getElementById('x');
 const keyReset = document.getElementById('reset');
 const keyResult = document.getElementById('result');
 
+let inputValue = '_';
+
 themeSlider.addEventListener('input', function() {
     const theme = parseInt(this.value);
 
@@ -38,3 +40,9 @@ themeSlider.addEventListener('input', function() {
     }
 
 });
+
+function displayInput () {
+  input.innerHTML = inputValue;
+}
+
+displayInput();
