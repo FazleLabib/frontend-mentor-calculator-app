@@ -3,46 +3,50 @@ const themeSlider = document.getElementById('slider-range');
 const input = document.getElementById('input');
 const output = document.getElementById('output');
 
-const keySeven = document.getElementById('7');
-const keyEight = document.getElementById('8');
-const keyNine = document.getElementById('9');
-const keyDel = document.getElementById('del');
-
-const keyFour = document.getElementById('4');
-const keyFive = document.getElementById('5');
-const keySix = document.getElementById('6');
-const keyAdd = document.getElementById('+');
-
-const keyOne = document.getElementById('1');
-const keyTwo = document.getElementById('2');
-const keyThree = document.getElementById('3');
-const keySubtract = document.getElementById('-');
-
-const keyDecimalPoint = document.getElementById('.');
-const keyZero = document.getElementById('0');
-const keyDivide = document.getElementById('/');
-const keyMultiply = document.getElementById('x');
+const keys = document.querySelectorAll('.key');
 
 const keyReset = document.getElementById('reset');
 const keyResult = document.getElementById('result');
 
-let inputValue = '_';
+let inputValue = '';
 
 themeSlider.addEventListener('input', function() {
-    const theme = parseInt(this.value);
+  const theme = parseInt(this.value);
 
-    document.body.classList.remove('theme-two', 'theme-three');
+  document.body.classList.remove('theme-two', 'theme-three');
 
-    if (theme === 2) {
-      document.body.classList.add('theme-two');
-    } else if (theme === 3) {
-      document.body.classList.add('theme-three');
-    }
+  if (theme === 2) {
+    document.body.classList.add('theme-two');
+  } else if (theme === 3) {
+    document.body.classList.add('theme-three');
+  }
 
 });
 
 function displayInput () {
   input.innerHTML = inputValue;
 }
+
+function addInput(keyInput) {
+  if (keyInput === 'del') {
+    inputValue = inputValue.slice(0, -1);
+  } else if (keyInput === '=') {
+    displayOutput();
+  } else {
+    inputValue += keyInput;
+  }
+  displayInput();
+}
+
+keys.forEach(key => {
+  key.addEventListener('click', function() {
+    addInput(this.textContent);
+  });
+});
+
+keyReset.addEventListener('click', function() {
+  inputValue = '';
+  displayInput();
+});
 
 displayInput();
