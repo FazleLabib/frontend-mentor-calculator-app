@@ -50,4 +50,65 @@ keyReset.addEventListener('click', function() {
   displayInput();
 });
 
+function calculate(inputValue) {
+  // Tokenize the input string
+  const tokens = inputValue.match(/\d+(\.\d+)?|[+\-x\/.]/g);
+  
+  // Implement operator precedence
+  const precedence = (operator) => {
+    if (operator === '+' || operator === '-') {
+      return 1;
+    } else if (operator === 'x' || operator === '/') {
+      return 2;
+    }
+    return 0;
+  };
+
+  // Convert infix to postfix using Shunting Yard algorithm
+  const result = [];
+  const operatorStack = [];
+  for (let token of tokens) {
+    if (!isNaN(token) || token === '.') {
+      result.push(token);
+    } else if (['+', '-', 'x', '/'].includes(token)) {
+        while (operatorStack.length > 0 && precedence(operatorStack[operatorStack.length - 1]) >= precedence(token)) {
+          result.push(operatorStack.pop());
+        }
+        operatorStack.push(token);
+      }
+  }
+
+  while (operatorStack.length > 0) {
+    result.push(operatorStack.pop());
+  }
+
+  // Evaluate postfix input
+  const operandStack = [];
+  for (let token of result) {
+    if (!isNaN(token)) {
+      operandStack.push(token);
+    } else if (['+', '-', 'x', '/'].includes(token)) {
+        const y = parseFloat(operandStack.pop());
+        const x = parseFloat(operandStack.pop());
+        let result;
+        switch (token) {
+          case '+':
+            result = x + y;
+            break;
+          case '-':
+            result = x - y;
+            break;
+          case 'x':
+            result = x * y;
+            break;
+          case '/':
+            result = x / y;
+            break;
+        }
+        operandStack.push(result);
+    }
+  }
+  output.innerHTML = operandStack[0];
+}
+
 displayInput();
