@@ -31,7 +31,7 @@ function addInput(keyInput) {
   if (keyInput === 'del') {
     inputValue = inputValue.slice(0, -1);
   } else if (keyInput === '=') {
-    displayOutput();
+    calculate(inputValue);
   } else {
     inputValue += keyInput;
   }
