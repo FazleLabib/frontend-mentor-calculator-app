@@ -46,6 +46,7 @@ keys.forEach(key => {
 
 keyReset.addEventListener('click', function() {
   inputValue = '';
+  output.innerHTML = 0;
   displayInput();
 });
 
