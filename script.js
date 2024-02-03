@@ -108,7 +108,13 @@ function calculate(inputValue) {
         operandStack.push(result);
     }
   }
-  output.innerHTML = operandStack[0];
+  if (isNaN(operandStack[0])) {
+    output.innerHTML = "Syntax ERROR";
+  } else if (!isFinite(operandStack[0])) {
+    output.innerHTML = "Math ERROR";
+  } else {
+    output.innerHTML = operandStack[0];
+  }
 }
 
 displayInput();
