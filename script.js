@@ -27,6 +27,11 @@ function displayInput () {
   input.innerHTML = inputValue;
 }
 
+function inputReset() {
+  inputValue = '';
+  displayInput();
+}
+
 function addInput(keyInput) {
   if (keyInput === 'del') {
     inputValue = inputValue.slice(0, -1);
@@ -114,6 +119,7 @@ function calculate(inputValue) {
     output.innerHTML = "Math ERROR";
   } else {
     output.innerHTML = operandStack[0];
+    inputReset();
   }
 }
 
