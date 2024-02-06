@@ -250,12 +250,12 @@ input[type="range"]::-moz-range-thumb:active {
   border-radius: 1rem;
   padding: 2rem;
   color: var(--text-one);
-  font-size: 3rem;
   overflow-x: hidden;
 }
 
 #input {
   opacity: 0.75;
+  font-size: 1.85rem;
   align-self: flex-start;
 }
 
@@ -271,6 +271,7 @@ input[type="range"]::-moz-range-thumb:active {
 }
 
 #output {
+  font-size: 3.5rem;
   align-self: flex-end;
 }
 
