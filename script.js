@@ -115,8 +115,10 @@ function calculate(inputValue) {
   }
   if (isNaN(operandStack[0])) {
     output.innerHTML = "Syntax ERROR";
+    inputReset();
   } else if (!isFinite(operandStack[0])) {
     output.innerHTML = "Math ERROR";
+    inputReset();
   } else {
     output.innerHTML = operandStack[0];
     inputReset();
