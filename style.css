@@ -291,7 +291,7 @@ input[type="range"]::-moz-range-thumb:active {
   padding: 1rem;
   border-radius: 0.65rem;
   color: var(--text-two);
-  aspect-ratio: 3.25;
+  aspect-ratio: 16/9;
   background-color: var(--key-background-3);
   box-shadow: 0px 5px 0px 0px var(--key-shadow-3);
   text-transform: uppercase;
@@ -304,6 +304,7 @@ input[type="range"]::-moz-range-thumb:active {
 #reset,
 #result {
   grid-column: span 2;
+  aspect-ratio: 16/4;
 }
 
 #del,
@@ -396,7 +397,7 @@ footer {
   #reset,
   #result {
     padding: 1rem;
-    aspect-ratio: 3.5;
+    aspect-ratio: 16/7;
   }
 
   .attribution {
