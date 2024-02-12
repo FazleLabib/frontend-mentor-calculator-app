@@ -194,7 +194,6 @@ input[type="range"]::-moz-range-track {
   background: var(--keypad-background);
   height: 1.65rem;
   border-radius: 1rem;
-  /* padding: 0.25rem; */
 }
 
 /***** Thumb Styles *****/
