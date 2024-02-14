@@ -70,4 +70,4 @@ const proudOfThisFunc = () => {
 
 ## Author
 
-- Frontend Mentor - [@yFazleLabib](https://www.frontendmentor.io/profile/FazleLabib)
+- Frontend Mentor - [@FazleLabib](https://www.frontendmentor.io/profile/FazleLabib)
