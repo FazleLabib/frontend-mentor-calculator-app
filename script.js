@@ -56,73 +56,86 @@ keyReset.addEventListener('click', function() {
 });
 
 function calculate(inputValue) {
-  // Tokenize the input string
-  const tokens = inputValue.match(/\d+(\.\d+)?|[+\-x\/.]/g);
-  
-  // Implement operator precedence
-  const precedence = (operator) => {
-    if (operator === '+' || operator === '-') {
-      return 1;
-    } else if (operator === 'x' || operator === '/') {
-      return 2;
-    }
-    return 0;
+  const tokens = tokenize(inputValue);
+  const postfixExpression = infixToPostfix(tokens);
+  const result = evaluatePostfix(postfixExpression);
+
+  if (isNaN(result)) {
+    output.innerHTML = "Syntax ERROR";
+  } else if (!isFinite(result)) {
+    output.innerHTML = "Math ERROR";
+  } else {
+    output.innerHTML = result;
+  }
+
+  inputReset();
+}
+
+function tokenize(inputValue) {
+  return inputValue.match(/\d+(\.\d+)?|[+\-x\/.]/g);
+}
+
+function infixToPostfix(tokens) {
+  const precedence = {
+    '+': 1,
+    '-': 1,
+    'x': 2,
+    '/': 2
   };
 
-  // Convert infix to postfix using Shunting Yard algorithm
   const result = [];
   const operatorStack = [];
+
   for (let token of tokens) {
     if (!isNaN(token) || token === '.') {
       result.push(token);
     } else if (['+', '-', 'x', '/'].includes(token)) {
-        while (operatorStack.length > 0 && precedence(operatorStack[operatorStack.length - 1]) >= precedence(token)) {
-          result.push(operatorStack.pop());
-        }
-        operatorStack.push(token);
+      while (
+        operatorStack.length > 0 &&
+        precedence[operatorStack[operatorStack.length - 1]] >= precedence[token]
+      ) {
+        result.push(operatorStack.pop());
       }
+      operatorStack.push(token);
+    }
   }
 
   while (operatorStack.length > 0) {
     result.push(operatorStack.pop());
   }
 
-  // Evaluate postfix input
+  return result;
+}
+
+function evaluatePostfix(postfixExpression) {
   const operandStack = [];
-  for (let token of result) {
+
+  for (let token of postfixExpression) {
     if (!isNaN(token)) {
-      operandStack.push(token);
+      operandStack.push(parseFloat(token));
     } else if (['+', '-', 'x', '/'].includes(token)) {
-        const y = parseFloat(operandStack.pop());
-        const x = parseFloat(operandStack.pop());
-        let result;
-        switch (token) {
-          case '+':
-            result = x + y;
-            break;
-          case '-':
-            result = x - y;
-            break;
-          case 'x':
-            result = x * y;
-            break;
-          case '/':
-            result = x / y;
-            break;
-        }
-        operandStack.push(result);
+      const y = operandStack.pop();
+      const x = operandStack.pop();
+      let result;
+      switch (token) {
+        case '+':
+          result = x + y;
+          break;
+        case '-':
+          result = x - y;
+          break;
+        case 'x':
+          result = x * y;
+          break;
+        case '/':
+          result = x / y;
+          break;
+      }
+      operandStack.push(result);
     }
   }
-  if (isNaN(operandStack[0])) {
-    output.innerHTML = "Syntax ERROR";
-    inputReset();
-  } else if (!isFinite(operandStack[0])) {
-    output.innerHTML = "Math ERROR";
-    inputReset();
-  } else {
-    output.innerHTML = operandStack[0];
-    inputReset();
-  }
+
+  return operandStack[0];
 }
 
 displayInput();
